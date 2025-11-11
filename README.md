@@ -1,5 +1,5 @@
 # 💫 Who is Ahmad Fakhrul Bawani:
-Driven by his passion in software development, Ahmad Fakhrul Bawani began his journey through front-end web development and competitive programming. He is currently pursuing his studies in Informatics Engineering at Institut Teknologi Sepuluh Nopember while also start learning about artificial intelligence spesifically Machine Learning and Neural Language Model
+Driven by his passion in software development, Ahmad Fakhrul Bawani began his journey through front-end web development and competitive programming. He is currently pursuing his studies in Informatics Engineering at Institut Teknologi Sepuluh Nopember while also start learning about artificial intelligence spesifically Machine Learning and Neural Language Model. Thank you for reading this introduction. I'm still learning all of these stack btw, no expert experience in one of them, love to explore them all!
 
 
 ## 🌐 Socials:
