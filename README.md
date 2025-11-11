@@ -32,10 +32,3 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 <div align="center">
   <img src="https://github-contributor-stats.vercel.app/api?username=ahmadfakhrulbawani2-arch&limit=5&theme=dark&combine_all_yearly_contributions=true">
 </div>
-
----
-<div align="center">
-  <img src="https://visitcount.itsvg.in/api?id=ahmadfakhrulbawani2-arch&icon=0&color=0)](https://visitcount.itsvg.in">
-</div>
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
