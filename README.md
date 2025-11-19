@@ -12,7 +12,6 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=ahmadfakhrulbawani2-arch&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=ahmadfakhrulbawani2-arch&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=ahmadfakhrulbawani2-arch&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
