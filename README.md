@@ -3,7 +3,7 @@
 <img src="Images\AHMAD FAKHRUL BAWANI.png" width="1920"/>
 Driven by his passion in software development, Ahmad Fakhrul Bawani began his journey through front-end web development and competitive programming. He is currently pursuing his studies in Informatics Engineering at Institut Teknologi Sepuluh Nopember while also start learning about artificial intelligence spesifically Machine Learning and Neural Language Model. Thank you for reading this introduction. I'm still learning all of these stack btw, no expert experience in one of them, love to explore them all!
 
-🔭 I’m currently studying Informatics Engineering in Institut Teknologi Sepuluh Nopember<br>👯 Open for collaboration.<br>🌱 I’m currently learning C/C++ for DSA and competitive programming, Python for AI, advance HTML, CSS, Javascript, React.js and Next.js for web dev.<br>⚡ Fun fact: I lost 10kg this year.
+🔭 I’m currently studying Informatics Engineering in Institut Teknologi Sepuluh Nopember<br>👯 Open for collaboration.<br>🌱 I’m currently learning C/C++ for DSA and competitive programming, Python for AI, advance HTML, CSS, Javascript, React.js and Next.js for web dev.<br>⚡ Fun fact: I lost 10kg this year and I can code for 10-15 hr a day (even up to 20 hr lol)
 
 
 ## 🌐 Socials:
