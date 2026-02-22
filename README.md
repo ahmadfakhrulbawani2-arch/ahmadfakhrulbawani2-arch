@@ -26,4 +26,6 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 | **Database**              | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)                                                                                                                                                                                                                                                                                                                                                                             |
 | **Tools & Others**        | ![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=white) ![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white) ![Adobe Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-%2331A8FF.svg?style=for-the-badge&logo=adobelightroom&logoColor=white) |
 
-<img src="Images\Motivasi-1.png" width="960" />
+<div align="center">
+  <img src="Images\Motivasi-1.png" width="300px" /> 
+</div>
