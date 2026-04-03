@@ -32,5 +32,4 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 <div align="center">
   <img src="Images\Motivasi-1.png" width="300px" /> 
   <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmadfakhrulbawani2-arch&" alt="ahmadfakhrulbawani2-arch" /></p>
-  <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Vlh0vxLIZGcju2GfM8hVq?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
 </div>
