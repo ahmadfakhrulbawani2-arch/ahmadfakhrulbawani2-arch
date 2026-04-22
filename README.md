@@ -31,8 +31,8 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 | **Currently Learning**    | ![Go](https://img.shields.io/badge/Go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![NoSQL](https://img.shields.io/badge/NoSQL-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white) |
 
 <div align="center">
-  <img src="Images\Motivasi-1.png" width="300px" /> 
-  <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmadfakhrulbawani2-arch&" alt="ahmadfakhrulbawani2-arch" /></p>
+  <img src="Images\Motivasi-1.png" width="300px" /> <br />
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=ahmadfakhrulbawani2-arch&theme=catppuccin-mocha&border_radius=4" alt="GitHub Streak" /></a>
 </div>
 <br />
 If your beloved linux suddenly hang, try to run this in its terminal:
