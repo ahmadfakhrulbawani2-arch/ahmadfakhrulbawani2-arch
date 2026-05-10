@@ -41,10 +41,10 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 # Coding Core
 
 <div align="center">
-  <img src="./Images/Biggest-Error.png" width="700px" /> <br /><br /><br /><br />
-  <img src="./Images/Highest-Loc.png" width="700px" /> <br /><br /><br /><br />
-  <img src="./Images/Highest-Contrib.png" width="700px" /> <br /><br /><br /><br />
-  <img src="./Images/Highest-Contrib-Auto.png" width="700px" /> <br /><br /><br /><br />
+  <img src="./Images/Biggest-Error.png" width="500px" />
+  <img src="./Images/Highest-Loc.png" width="500px" /> <br /><br /><br /><br />
+  <img src="./Images/Highest-Contrib.png" width="500px" /> 
+  <img src="./Images/Highest-Contrib-Auto.png" width="500px" /> <br /><br /><br /><br />
 </div>
 
 > I'm always feeling behind just like you, a term called FOMO. But I realized, life is just about "istiqomah" or consistent
