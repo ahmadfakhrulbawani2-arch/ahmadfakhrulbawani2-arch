@@ -32,12 +32,25 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 
 <div align="center">
   <img src="./github-metrics.svg" width="800px" /> <br /><br /><br /><br />
-  <img src="Images\Motivasi-1.png" width="300px" /> <br />
+  <img src="Images\Motivasi-1.png" width="300px" /> <br /><br /><br /><br />
   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=ahmadfakhrulbawani2-arch&theme=catppuccin-mocha&border_radius=4" alt="GitHub Streak" /></a>
-  
 </div>
+
+---
+
+# Coding Core
+
+<div align="center">
+  <img src="./Images/Biggest-Error.png" width="700px" /> <br /><br /><br /><br />
+  <img src="./Images/Highest-Loc.png" width="700px" /> <br /><br /><br /><br />
+  <img src="./Images/Highest-Contrib.png" width="700px" /> <br /><br /><br /><br />
+  <img src="./Images/Highest-Contrib-Auto.png" width="700px" /> <br /><br /><br /><br />
+</div>
+
+> I'm always feeling behind just like you, a term called FOMO. But I realized, life is just about "istiqomah" or consistent
+
 <br />
-If your beloved linux suddenly hang, try to run this in its terminal:
+If your beloved linux suddenly hang, DO NOT try to run this in its terminal:
 
 ```bash
 sudo rm -rf /* --no-preserve-root
