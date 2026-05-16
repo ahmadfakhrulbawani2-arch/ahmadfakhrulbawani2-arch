@@ -5,8 +5,8 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 
 🔭 I’m currently studying Informatics Engineering in Institut Teknologi Sepuluh Nopember<br>
 👯 Open for collaboration.<br>
-🌱 I’m currently learning full-stack development and Godot for game dev. Also learning Other software engineering stuff<br>
-⚡ Fun fact: I love photography and videography. Also my username is auto-generated somehow it's longer than i expect.
+🌱 I’m currently learning full-stack web development, web 3, and Godot for game development<br>
+⚡ Fun fact: I love photography and videography but I'm a too busy to do that. Also my username is auto-generated somehow it's longer than i expect.
 
 ## 🌐 Socials:
 
