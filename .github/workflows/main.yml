@@ -28,7 +28,7 @@ jobs:
 
           # Plugin: Isocalendar (Kotak-kotak warna-warni detail per tahun - Opsional)
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          plugin_isocalendar_duration: full-year
 
           # Plugin: Languages (Analisis bahasa coding)
           plugin_languages: yes
