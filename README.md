@@ -36,7 +36,9 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
 <div align="center">
   <img src="./github-metrics.svg" width="800px" /> <br /><br /><br /><br />
   <img src="Images\Motivasi-1.png" width="300px" /> <br /><br /><br /><br />
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Vlh0vxLIZGcju2GfM8hVq?utm_source=generator" width="70%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> <br /><br /><br /><br />
   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=ahmadfakhrulbawani2-arch&theme=catppuccin-mocha&border_radius=4" alt="GitHub Streak" /></a>
+
 </div>
 
 > Never stop learning, those who stops learning stop living. ~Prime Newton
