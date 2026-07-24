@@ -13,7 +13,7 @@ Usage:
  - Or convert PNG images to SVG using https://convertio.co/png-svg/
 """
 # Enter file location here
-file = open(r"Images\windia_nata_3.svg", "r")
+file = open(r"Images\windia_nata_2.svg", "r")
 data = str(file.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
 file.close()
 
@@ -317,9 +317,9 @@ for i in range(len(equations)):
 desmos += "</script>"
 
 # Save and open Desmos file
-with open("windia_nata_3.html", "w") as f:
+with open("windia_nata_2.html", "w") as f:
     f.write(desmos)
-webbrowser.open("windia_nata_3.html", new=2)
+webbrowser.open("windia_nata_2.html", new=2)
 
 # TODO:
 # Explain the math

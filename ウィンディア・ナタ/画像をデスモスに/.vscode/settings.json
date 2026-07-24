@@ -1,0 +1,11 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.tabSize": 4
+  }
+}
