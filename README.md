@@ -1,6 +1,7 @@
 # 💫 Who is Ahmad Fakhrul Bawani?
 
 <img src="Images\AHMAD FAKHRUL BAWANI.png" width="1920" />
+
 Driven by his passion in software development, Ahmad Fakhrul Bawani began his journey through front-end web development and competitive programming. He is currently pursuing his studies in Informatics Engineering at Institut Teknologi Sepuluh Nopember while also start learning about artificial intelligence spesifically Machine Learning and Neural Language Model. Thank you for reading this introduction. I'm still learning all of these stack btw, no expert experience in one of them, love to explore them all!
 
 🔭 I’m currently studying Informatics Engineering in Institut Teknologi Sepuluh Nopember<br>
@@ -39,11 +40,13 @@ Driven by his passion in software development, Ahmad Fakhrul Bawani began his jo
   <p align="center">
     <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31q3jlad4bwrnax4qz5hrv3pi6fu&redirect=true">
       <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q3jlad4bwrnax4qz5hrv3pi6fu&cover_image=true&theme=spotify-embed&show_offline=true&background_color=121212&interchange=true&profanity=true&hide_remaster=true&bar_color=53b14f&bar_color_cover=false&mode=dark">
-    </a>
+    </a> <br/>
+    <a href="https://open.spotify.com/playlist/6Vlh0vxLIZGcju2GfM8hVq?si=9796476d6db243a6">My playlist</a>
   </p> <br /><br /><br /><br />
-  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=ahmadfakhrulbawani2-arch&theme=catppuccin-mocha&border_radius=4" alt="GitHub Streak" /></a>
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=ahmadfakhrulbawani2-arch&theme=catppuccin-mocha&border_radius=4" alt="GitHub Streak" /></a><br /><br /><br /><br />
 
-</div>
+  <img src="Images\painting.png" width="1920" />
+</div><br />
 
 > Never stop learning, those who stops learning stop living. ~Prime Newton
 
