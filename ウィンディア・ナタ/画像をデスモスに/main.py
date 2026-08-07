@@ -4,7 +4,7 @@ import webbrowser
 
 import numpy as np
 import svgpathtools
-from svgpathtools import Line, CubicBezier
+from svgpathtools import CubicBezier, Line
 
 """
 Usage:
@@ -19,6 +19,7 @@ file.close()
 
 
 # Functions
+
 
 # Detect the types of segments
 def _tokenize_path(pathfinder):
@@ -107,10 +108,8 @@ path = extract_path(pathString)  # Get the path from the SVG file
 
 equations, regularEquations = [], []
 for segment in path:
-
     # Iterate through each segment, a set of 4 points, in the SVG file and check what type of segment it is
     if isinstance(segment, svgpathtools.path.Line):
-
         # Extract the start and end points from the line segment
         start = aplusbiFormat(segment.start.real, segment.start.imag)
         end = aplusbiFormat(segment.end.real, segment.end.imag)
@@ -193,7 +192,6 @@ for segment in path:
             regularEquations.append(lambda x: start.real)
 
     elif isinstance(segment, svgpathtools.path.CubicBezier):
-
         # extract the bezier points from the segment
         p0 = aplusbiFormat(segment.start.real, segment.start.imag)
         p1 = aplusbiFormat(segment.control1.real, segment.control1.imag)
@@ -223,10 +221,12 @@ for segment in path:
 
         # Convert the bezier points into a parametric equation in lambda format
         regularEquations.append(
-            lambda t: (1 - t) ** 3 * p0
-                      + 3 * t * (1 - t) ** 2 * p1
-                      + 3 * t ** 2 * (1 - t) * p2
-                      + t ** 3 * p3
+            lambda t: (
+                (1 - t) ** 3 * p0
+                + 3 * t * (1 - t) ** 2 * p1
+                + 3 * t**2 * (1 - t) * p2
+                + t**3 * p3
+            )
         )
 
     elif isinstance(segment, svgpathtools.path.QuadraticBezier):
@@ -254,7 +254,7 @@ for segment in path:
 
         # Convert the bezier points into a parametric equation in lambda format
         regularEquations.append(
-            lambda t: (1 - t) ** 2 * p0 + 2 * t * (1 - t) * p1 + t ** 2 * p2
+            lambda t: (1 - t) ** 2 * p0 + 2 * t * (1 - t) * p1 + t**2 * p2
         )
 
     elif isinstance(segment, svgpathtools.path.Arc):
@@ -294,25 +294,25 @@ desmos = """
 
 # Add the bounds to the Desmos API script
 desmos += (
-        "calculator.setMathBounds({ left: "
-        + str(-194.97)
-        + ", right: "
-        + str(8852.635)
-        + ", bottom: "
-        + str(-221.556)
-        + ", top: "
-        + str(6152.893)
-        + " });\n"
+    "calculator.setMathBounds({ left: "
+    + str(-194.97)
+    + ", right: "
+    + str(8852.635)
+    + ", bottom: "
+    + str(-221.556)
+    + ", top: "
+    + str(6152.893)
+    + " });\n"
 )
 
 # Add each equation to the Desmos API script
 for i in range(len(equations)):
     desmos += (
-            "calculator.setExpression({ id: 'a-slider"
-            + str(i)
-            + "', latex: '"
-            + equations[i]
-            + "', color: Desmos.Colors.BLACK });\n"
+        "calculator.setExpression({ id: 'a-slider"
+        + str(i)
+        + "', latex: '"
+        + equations[i]
+        + "', color: Desmos.Colors.BLACK });\n"
     )
 desmos += "</script>"
 
