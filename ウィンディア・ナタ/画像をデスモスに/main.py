@@ -6,22 +6,10 @@ import numpy as np
 import svgpathtools
 from svgpathtools import CubicBezier, Line
 
-"""
-Usage:
- - Only SVG file types are supported
- - Use https://freesvg.org/ for free SVG files
- - Or convert PNG images to SVG using https://convertio.co/png-svg/
-"""
-# Enter file location here
-file = open(r"Images\windia_nata_2.svg", "r")
+file = open(r"Images\hut-81-ri.svg", "r")
 data = str(file.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
 file.close()
 
-
-# Functions
-
-
-# Detect the types of segments
 def _tokenize_path(pathfinder):
     FLOAT_RE = re.compile("[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?")
     for x in re.compile("([MmZzLlHhVvCcSsQqTtAa])").split(pathfinder):
@@ -30,22 +18,15 @@ def _tokenize_path(pathfinder):
         for token in FLOAT_RE.findall(x):
             yield token
 
-
-# transform into a complex number in the for (a + bi)
 def aplusbiFormat(real, imaginary):
     return real + imaginary * 1j
 
-
-# Convert points to equations from the bezier points
 def extract_path(pathfinder, current_pos=0j):
-    # Variables
     elements = list(_tokenize_path(pathfinder))
     elements.reverse()
     segments = []
     start_pos = None
     command = None
-
-    # Loop through all the paths
     while elements:
         if elements[-1] in set("MmZzLlHhVvCcSsQqTtAa"):
             command = elements.pop()
@@ -96,39 +77,26 @@ def extract_path(pathfinder, current_pos=0j):
 
     return segments
 
-
-# get all the text in between the <path and ></path>
 pathArray = re.findall(r'<path d="(.*?)"', data, re.DOTALL)
 
 pathString = ""
 for path in pathArray:
     pathString += path
 
-path = extract_path(pathString)  # Get the path from the SVG file
+path = extract_path(pathString)  
 
 equations, regularEquations = [], []
 for segment in path:
-    # Iterate through each segment, a set of 4 points, in the SVG file and check what type of segment it is
     if isinstance(segment, svgpathtools.path.Line):
-        # Extract the start and end points from the line segment
         start = aplusbiFormat(segment.start.real, segment.start.imag)
         end = aplusbiFormat(segment.end.real, segment.end.imag)
-
-        # check to make sure line doesn't have undefined slope to prevent mathematical errors
         if end.real - start.real != 0 and end.imag - start.imag != 0:
-            # calculate the slope and y-intercept of the line segment
             m = (end.imag - start.imag) / (end.real - start.real)
             b = start.imag - m * start.real
-
-            # calculate the bounds of the line segment in the x direction
             xMin = min(start.real, end.real)
             xMax = max(start.real, end.real)
-
-            # calculate the bounds of the line segment in the y direction
             yMin = min(start.imag, end.imag)
             yMax = max(start.imag, end.imag)
-
-            # Convert the linear equation into the form y=mx+b and put it in latex format
             equations.append(
                 "y="
                 + str(m)
@@ -144,19 +112,12 @@ for segment in path:
                 + str(yMax)
                 + "\\\\right\\\\}"
             )
-
-            # Convert the linear equation into the form y=mx+b and put it in lambda format
             regularEquations.append(lambda x: m * x + b)
         if end.real - start.real == 0:
-            # calculate the bounds of the line segment in the x direction
             xMin = min(start.real, end.real)
             xMax = max(start.real, end.real)
-
-            # calculate the bounds of the line segment in the y direction
             yMin = min(start.imag, end.imag)
             yMax = max(start.imag, end.imag)
-
-            # Convert the linear equation into the form x=c and put it in latex format
             equations.append(
                 "x="
                 + str(start.real)
@@ -170,14 +131,10 @@ for segment in path:
                 + str(yMax)
                 + "\\\\right\\\\}"
             )
-
-            # Convert the linear equation into the form x=c and put it in lambda format
             regularEquations.append(lambda x: start.real)
         else:
             yMin = min(start.imag, end.imag)
             yMax = max(start.imag, end.imag)
-
-            # if the slope is undefined, then the line is vertical and the equation is in the form x=a
             equations.append(
                 "x="
                 + str(start.real)
@@ -187,18 +144,13 @@ for segment in path:
                 + str(yMax)
                 + "\\\\right\\\\}"
             )
-
-            # if the slope is undefined, then the line is vertical and the equation is in the form x=a
             regularEquations.append(lambda x: start.real)
 
     elif isinstance(segment, svgpathtools.path.CubicBezier):
-        # extract the bezier points from the segment
         p0 = aplusbiFormat(segment.start.real, segment.start.imag)
         p1 = aplusbiFormat(segment.control1.real, segment.control1.imag)
         p2 = aplusbiFormat(segment.control2.real, segment.control2.imag)
         p3 = aplusbiFormat(segment.end.real, segment.end.imag)
-
-        # Convert the bezier points into a parametric equation in latex format
         equations.append(
             "\\\\left((1-t)^3*"
             + str(p0.real)
@@ -218,8 +170,6 @@ for segment in path:
             + str(p3.imag)
             + ")\\\\right)"
         )
-
-        # Convert the bezier points into a parametric equation in lambda format
         regularEquations.append(
             lambda t: (
                 (1 - t) ** 3 * p0
@@ -230,12 +180,9 @@ for segment in path:
         )
 
     elif isinstance(segment, svgpathtools.path.QuadraticBezier):
-        # Quadratic Bezier segment
         p0 = aplusbiFormat(segment.start.real, segment.start.imag)
         p1 = aplusbiFormat(segment.control.real, segment.control.imag)
         p2 = aplusbiFormat(segment.end.real, segment.end.imag)
-
-        # Convert the bezier points into a parametric equation in latex format
         equations.append(
             "\\\\left((1-t)^2*"
             + str(p0.real)
@@ -251,19 +198,14 @@ for segment in path:
             + str(p2.imag)
             + ")\\\\right))"
         )
-
-        # Convert the bezier points into a parametric equation in lambda format
         regularEquations.append(
             lambda t: (1 - t) ** 2 * p0 + 2 * t * (1 - t) * p1 + t**2 * p2
         )
 
     elif isinstance(segment, svgpathtools.path.Arc):
-        # Elliptical arc segment
         p0 = aplusbiFormat(segment.start.real, segment.start.imag)
         p1 = aplusbiFormat(segment.end.real, segment.end.imag)
         r = aplusbiFormat(segment.radius.real, segment.radius.imag)
-
-        # Convert the bezier points into a parametric equation in latex format
         equations.append(
             "\\\\left("
             + str(p0.real)
@@ -275,14 +217,11 @@ for segment in path:
             + str(r.imag)
             + "*\\sin(t)\\\\right)"
         )
-
-        # Convert the bezier points into a parametric equation in lambda format
         regularEquations.append(lambda t: p0 + r * np.exp(1j * t))
 
     else:
         print("Unknown segment type: " + str(type(segment)))
 
-# Define the Desmos API script
 desmos = """
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
@@ -292,7 +231,6 @@ desmos = """
  var calculator = Desmos.GraphingCalculator(elt);
 """
 
-# Add the bounds to the Desmos API script
 desmos += (
     "calculator.setMathBounds({ left: "
     + str(-194.97)
@@ -305,7 +243,6 @@ desmos += (
     + " });\n"
 )
 
-# Add each equation to the Desmos API script
 for i in range(len(equations)):
     desmos += (
         "calculator.setExpression({ id: 'a-slider"
@@ -316,24 +253,13 @@ for i in range(len(equations)):
     )
 desmos += "</script>"
 
-# Save and open Desmos file
-with open("windia_nata_2.html", "w") as f:
+with open("hut-81-ri.html", "w") as f:
     f.write(desmos)
-webbrowser.open("windia_nata_2.html", new=2)
+webbrowser.open("hut-81-ri.html", new=2)
 
-# TODO:
-# Explain the math
-# Complete to do in readme
-# Clean up Github Profile
-# Create sample HTML files
-
-# save the equations to a file
-
-# print all the eauations
 for i in range(len(equations)):
     print(equations[i].replace("\\\\", "\\"))
 
-# save the equations to a file
 with open("equations.txt", "w") as f:
     for i in range(len(equations)):
         f.write(equations[i].replace("\\\\", "\\") + "\n")
