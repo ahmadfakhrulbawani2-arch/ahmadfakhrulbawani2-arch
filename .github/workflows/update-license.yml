@@ -1,0 +1,35 @@
+name: Update copyright year(s) in license file
+
+on:
+  schedule:
+    - cron: "0 3 1 1 *"
+  push:
+    branches:
+      - "main" # Or 'master' depending on your default branch
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: FantasticFiasco/action-update-license-year@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        id: license
+      - name: Merge PR
+        if: steps.license.outputs.pullRequestNumber != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Replace '--merge' with '--rebase' to rebase the commits onto the base
+        # branch, or with '--squash' to squash the commits into one commit and
+        # merge it into the base branch.
+        # For more information regarding the merge command, please see
+        # https://cli.github.com/manual/gh_pr_merge.
+        run: gh pr merge --merge --delete-branch ${{ steps.license.outputs.pullRequestNumber }}
