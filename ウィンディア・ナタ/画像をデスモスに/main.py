@@ -6,7 +6,7 @@ import numpy as np
 import svgpathtools
 from svgpathtools import CubicBezier, Line
 
-file = open(r"Images\windia_nata_2.svg", "r")
+file = open(r"Images\characters.svg", "r")
 data = str(file.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
 file.close()
 
@@ -253,9 +253,9 @@ for i in range(len(equations)):
     )
 desmos += "</script>"
 
-with open("windia_nata_2.html", "w") as f:
+with open("characters.html", "w") as f:
     f.write(desmos)
-webbrowser.open("windia_nata_2.html", new=2)
+webbrowser.open("characters.html", new=2)
 
 for i in range(len(equations)):
     print(equations[i].replace("\\\\", "\\"))
